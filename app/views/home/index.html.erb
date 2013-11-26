@@ -1,5 +1,11 @@
 <div class="flex-video" id="main_map" class="dark"></div>
 
+<!-- Modals -->
+<%= render partial: 'content/about' %>
+<%= render partial: 'content/links' %>
+<%= render partial: 'content/how' %>
+<%= render partial: 'content/join' %>
+
 <script type="text/javascript">
   var map = L.mapbox.map('main_map', 'livia.map-zbsobfzo').setView([15, -40], 3);
 

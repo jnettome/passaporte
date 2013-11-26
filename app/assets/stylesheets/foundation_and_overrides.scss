@@ -990,5 +990,7 @@ $topbar-bg: $topbar-bg-color;
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+$header-font-family: "Quicksand", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
 @import 'foundation';
 @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
