@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="flex-video" id="main_map" class="dark"></div>
+
+<script type="text/javascript">
+  var map = L.mapbox.map('main_map', 'livia.map-zbsobfzo').setView([15, -40], 3);
+
+  // L.marker([51.5, -0.09]).addTo(map)
+  //   .bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
+</script>
