@@ -1,13 +1,13 @@
 @import 'foundation-icons';
 // font-family: 'Quicksand', sans-serif;
 body {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
 
   font-family: 'Quicksand', sans-serif !important;
 
   #main_map {
-    height: 100%;
+    // height: 100%;
   }
 
 }
@@ -19,4 +19,10 @@ body {
 
 .button.orange {
   background-color: rgba(235, 146, 92, 1);
+}
+
+
+.leaflet-popup-content {
+  width: 400px;
+  height: 200px;
 }
