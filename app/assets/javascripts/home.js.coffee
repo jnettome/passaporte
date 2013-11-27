@@ -1,3 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+# $ ->
+  # $('#sendJoin').on 'click', (e) ->
+    # e.preventDefault()
+    # $('#joinModal').foundation('reveal', 'close')
+    # alert = $('<div data-alert data-options="animation_speed:500;" class="custom-alert-box">' +
+      # 'OI!</div>')
+    # $('body').append(alert)
