@@ -50,6 +50,9 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 # Zurb's Foundation 5
 gem 'foundation-rails'
 
+# Zurb's Foundation 3 Icons
+gem 'foundation-icons-sass-rails', github: 'zaiste/foundation-icons-sass-rails', branch: 'v3.x'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
