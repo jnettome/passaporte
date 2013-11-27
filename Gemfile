@@ -39,6 +39,9 @@ end
 group :production do
   # Use PG in production
   gem 'pg'
+
+  # Heroku assets
+  gem 'rails_12factor'
 end
 
 # Active Admin
