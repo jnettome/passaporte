@@ -2,14 +2,11 @@ $ ->
   $('#sendJoin').on 'click', (e) ->
     e.preventDefault()
     $('#joinModal').foundation('reveal', 'close')
-    # alert = $('<div data-alert data-options="animation_speed:500;" class="custom-alert-box">' +
-    #   'OI!</div>')
-    # $('body').append(alert)
 
+  $(window).on 'resize', ->
+    $('#main_map').height parseInt($(window).innerHeight()) - 40 + 'px'
 
-# $ ->
-#   $(window).on 'resize', ->
-#     @stretch_content()
+  L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
 
-# @stretch_content = ->
-#   $('#main_map').height $(window).innerHeight() - $('#main_map').height
+  $('#main_map').height parseInt($(window).innerHeight()) - 40 + 'px'
