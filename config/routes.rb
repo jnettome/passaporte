@@ -1,4 +1,6 @@
 Passaporte::Application.routes.draw do
+  resources :profiles
+
   get "home/index"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

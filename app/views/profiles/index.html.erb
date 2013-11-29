@@ -1,0 +1,57 @@
+<h1>Listing profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Course</th>
+      <th>University</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Transportation tip</th>
+      <th>Housing tip</th>
+      <th>Visa tip</th>
+      <th>Cultural tip</th>
+      <th>Feeding tip</th>
+      <th>Other tip</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.name %></td>
+        <td><%= profile.email %></td>
+        <td><%= profile.age %></td>
+        <td><%= profile.course %></td>
+        <td><%= profile.university %></td>
+        <td><%= profile.city %></td>
+        <td><%= profile.country %></td>
+        <td><%= profile.transportation_tip %></td>
+        <td><%= profile.housing_tip %></td>
+        <td><%= profile.visa_tip %></td>
+        <td><%= profile.cultural_tip %></td>
+        <td><%= profile.feeding_tip %></td>
+        <td><%= profile.other_tip %></td>
+        <td><%= profile.latitude %></td>
+        <td><%= profile.longitude %></td>
+        <td><%= profile.active %></td>
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>

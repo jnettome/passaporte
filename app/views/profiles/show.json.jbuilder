@@ -1,0 +1,1 @@
+json.extract! @profile, :name, :email, :age, :course, :university, :city, :country, :transportation_tip, :housing_tip, :visa_tip, :cultural_tip, :feeding_tip, :other_tip, :latitude, :longitude, :active, :created_at, :updated_at
