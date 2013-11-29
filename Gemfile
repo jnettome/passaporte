@@ -53,6 +53,9 @@ gem 'foundation-rails'
 # Zurb's Foundation 3 Icons
 gem 'foundation-icons-sass-rails', github: 'zaiste/foundation-icons-sass-rails', branch: 'v3.x'
 
+# Geolocation
+gem 'geocoder', '1.1.8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
