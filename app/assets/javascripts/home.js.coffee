@@ -1,12 +1,14 @@
 $ ->
   $('#sendJoin').on 'click', (e) ->
-    e.preventDefault()
     $('#joinModal').foundation('reveal', 'close')
 
   $(window).on 'resize', ->
     $('#main_map').height parseInt($(window).innerHeight()) - 40 + 'px'
 
-  L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+  $.get '/profiles.json', (data) ->
+    for profile in data
+      do (profile) ->
+        if profile.latitude && profile.longitude
+          L.marker([profile.latitude, profile.longitude]).addTo(map)
 
   $('#main_map').height parseInt($(window).innerHeight()) - 40 + 'px'

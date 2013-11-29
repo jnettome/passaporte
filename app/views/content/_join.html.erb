@@ -2,25 +2,39 @@
   <h2>Formulário para Colaborador</h2>
   <p>Olá! Primeiramente, obrigado por participar deste projeto dividindo um pouco da sua experiência como intercambista. Sua colaboração é muito importante para que cada vez mais os intercambistas da Universidade Federal do Paraná possam aproveitar ao máximo a experiência da mobilidade acadêmica. Preencha as lacunas a seguir e, se quiser, deixe seu email para que estudantes interessados possam entrar em contato. Caso queira, você também pode incluir uma foto sua (que tal uma bem bonita de quando você viajou?) Novamente, muito obrigado!</p>
 
-  <form>
+  <%= form_for(@profile) do |f| %>
+    <% if @profile.errors.any? %>
+      <div class="row">
+        <div id="error_explanation" class="large-12 columns">
+          <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+          <ul>
+          <% @profile.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
     <div class="row">
       <div class="large-6 columns">
         <label>Nome</label>
-        <input type="text" />
+        <%= f.text_field :name %>
       </div>
       <div class="large-6 columns">
         <label>Email</label>
-        <input type="email" />
+        <%= f.text_field :email %>
       </div>
     </div>
     <div class="row">
       <div class="large-4 columns">
         <label>Idade</label>
-        <input type="text" />
+        <%= f.text_field :age %>
       </div>
       <div class="large-4 columns">
         <label>Curso</label>
-        <input type="text" />
+        <%= f.text_field :course %>
       </div>
       <div class="large-4 columns">
         <label>Sua Foto</label>
@@ -31,15 +45,15 @@
     <div class="row">
       <div class="large-4 columns">
         <label>Universidade de Destino</label>
-        <input type="text" />
+        <%= f.text_field :university %>
       </div>
       <div class="large-4 columns">
         <label>Cidade</label>
-        <input type="text" />
+        <%= f.text_field :city %>
       </div>
       <div class="large-4 columns">
         <label>País</label>
-        <input type="text" />
+        <%= f.text_field :country %>
       </div>
     </div>
 
@@ -47,41 +61,41 @@
       <div class="row">
         <div class="large-4 columns">
           <label>Dicas de alimentação e compras</label>
-          <textarea></textarea>
+          <%= f.text_area :feeding_tip %>
         </div>
         <div class="large-4 columns">
           <label>Dicas culturais</label>
-          <textarea></textarea>
+          <%= f.text_area :cultural_tip %>
         </div>
         <div class="large-4 columns">
           <label>Demais dicas</label>
-          <textarea></textarea>
+          <%= f.text_area :other_tip %>
         </div>
       </div>
 
       <div class="row">
         <div class="large-4 columns">
           <label>Dicas sobre passagens e visto</label>
-          <textarea></textarea>
+          <%= f.text_area :visa_tip %>
         </div>
         <div class="large-4 columns">
           <label>Dicas de moradia e segurança</label>
-          <textarea></textarea>
+          <%= f.text_area :housing_tip %>
         </div>
         <div class="large-4 columns">
           <label>Dicas de transporte</label>
-          <textarea></textarea>
+          <%= f.text_area :transportation_tip %>
         </div>
       </div>
     </fieldset>
 
     <div class="row">
       <div class="large-12 columns">
-        <a href="#" class="button right" id="sendJoin">Enviar</a>
+        <%= f.submit 'Enviar', class: 'button right', id: 'sendJoin' %>
       </div>
     </div>
 
-  </form>
+  <% end %>
 
   <a class="close-reveal-modal">&#215;</a>
 </div>
