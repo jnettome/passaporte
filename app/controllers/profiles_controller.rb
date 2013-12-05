@@ -1,6 +1,7 @@
 # encoding: utf-8
 class ProfilesController < InheritedResources::Base
   respond_to :html, :json
+  layout false, only: :show
 
   def permitted_params
     params.permit(:profile => [:name, :email, :age, :course, :university, :city,

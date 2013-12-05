@@ -1,5 +1,4 @@
 @import 'foundation-icons';
-// font-family: 'Quicksand', sans-serif;
 body {
   font-family: 'Quicksand', sans-serif !important;
 
@@ -29,4 +28,9 @@ body {
 .leaflet-popup-content {
   width: 400px;
   height: 200px;
+}
+
+.preview {
+  p { font-family: 'Quicksand', sans-serif !important; }
+  background: #fff;
 }
