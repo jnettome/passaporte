@@ -14,18 +14,21 @@ $ ->
     feature = marker.feature
 
     # Create custom popup content
-    popupContent = "<div class=\"small-12 columns preview\">" +
-      "<p>#{feature.properties.city}, #{feature.properties.country}</p>" +
-      "<p>#{feature.properties.name}<br/>" +
-      "#{feature.properties.age} anos<br/>" +
-      "#{feature.properties.course}<br/>" +
-      "#{feature.properties.university}</p>" +
-      "<a href=\"#{feature.properties.url}\" class=\"loadProfile\">ver o perfil completo</a>" +
+    popupContent = "<div class=\"large-12 columns preview\">" +
+      "<div class=\"row\"><h6>#{feature.properties.city}, #{feature.properties.country}</h6></div>" +
+      "<div class=\"row\">" +
+        "<h4>#{feature.properties.name}</h4>" +
+        "<h5>#{feature.properties.age} anos</h5>" +
+      "</div>" +
+      "<div class=\"row\">" +
+        "<h5>#{feature.properties.course} - #{feature.properties.university}</h5>" +
+      "</div>" +
+      "<a href=\"#{feature.properties.url}\" class=\"button tiny secondary loadProfile\">ver o perfil completo</a>" +
     "</div>"
 
     # http://leafletjs.com/reference.html#popup
     marker.bindPopup popupContent,
-      closeButton: false
+      closeButton: true
       minWidth: 320
 
     marker.on 'popupopen', (popupEvent) ->

@@ -1,84 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+  <div class="large-12 columns">
+    <h1><%= @profile.name %> <small><%= @profile.age %> anos</small></h1>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @profile.email %>
-</p>
+</div>
 
-<p>
-  <strong>Age:</strong>
-  <%= @profile.age %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Course:</strong>
-  <%= @profile.course %>
-</p>
+  <div class="large-6 columns">
+    <h3><%= @profile.course %> em <%= @profile.university %></h3>
+  </div>
+  <div class="large-6 columns">
+    <h3><%= @profile.city %> / <%= @profile.country %></h3>
+  </div>
 
-<p>
-  <strong>University:</strong>
-  <%= @profile.university %>
-</p>
+</div>
 
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Country:</strong>
-  <%= @profile.country %>
-</p>
+  <div class="large-12 columns"><hr></div>
 
-<p>
-  <strong>Transportation tip:</strong>
-  <%= @profile.transportation_tip %>
-</p>
+</div>
 
-<p>
-  <strong>Housing tip:</strong>
-  <%= @profile.housing_tip %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Visa tip:</strong>
-  <%= @profile.visa_tip %>
-</p>
+  <div class="large-4 columns">
+    <h5>Dicas sobre passagem e visto:</h5>
+    <p><%= @profile.visa_tip %></p>
+  </div>
+  <div class="large-4 columns">
+    <h5>Dicas de moradia e segurança:</h5>
+    <p><%= @profile.housing_tip %></p>
+  </div>
+  <div class="large-4 columns">
+    <h5>Dicas de transporte:</h5>
+    <p><%= @profile.transportation_tip %></p>
+  </div>
+  <div class="large-4 columns">
+    <h5>Dicas de alimentação e compras:</h5>
+    <p><%= @profile.feeding_tip %></p>
+  </div>
+  <div class="large-4 columns">
+    <h5>Dicas culturais:</h5>
+    <p><%= @profile.cultural_tip %></p>
+  </div>
+  <div class="large-4 columns">
+    <h5>Demais dicas e sugestões:</h5>
+    <p><%= @profile.other_tip %></p>
+  </div>
+</div>
 
-<p>
-  <strong>Cultural tip:</strong>
-  <%= @profile.cultural_tip %>
-</p>
-
-<p>
-  <strong>Feeding tip:</strong>
-  <%= @profile.feeding_tip %>
-</p>
-
-<p>
-  <strong>Other tip:</strong>
-  <%= @profile.other_tip %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @profile.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @profile.longitude %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @profile.active %>
-</p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<a class="close-reveal-modal">&#215;</a>
